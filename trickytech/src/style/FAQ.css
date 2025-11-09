@@ -1,0 +1,89 @@
+/* ===================================================================
+    FAQ Section Styling (Aligned with CareerCoaching.css)
+=================================================================== */
+
+.faq-section {
+    padding: var(--section-padding, 80px 0);
+    background-color: var(--white-color, #ffffff);
+}
+
+.faq-section .faq-title {
+    color: var(--primary-color, #005025);
+    font-weight: 700;
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Accordion Styling */
+.faq-container {
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.faq-item {
+    border-bottom: 1px solid #e0e0e0;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--dark-color, #222);
+    background-color: var(--white-color, #ffffff);
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: #f8f9fa;
+}
+
+.faq-question:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.faq-item.active .faq-question {
+    color: var(--primary-color, #005025);
+    background-color: rgba(0, 191, 88, 0.05);
+}
+
+.faq-question .faq-icon {
+    font-size: 1.5rem;
+    font-weight: 300;
+    transition: transform 0.3s ease;
+    color: var(--secondary-color, #00bf58);
+    margin-left: auto;
+
+}
+
+.faq-item.active .faq-question .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    background-color: var(--white-color, #ffffff);
+    padding: 0 20px 0 20px;
+    font-size: 1rem;
+    color: var(--text-color, #4a4a4a);
+    line-height: 1.6;
+    /* Smooth transition for answer visibility */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px; /* Adjust if answers are longer */
+    padding: 10px 20px 20px 20px;
+    transition: max-height 0.4s ease-in, padding 0.4s ease-in;
+}

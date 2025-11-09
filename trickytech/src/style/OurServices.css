@@ -1,0 +1,116 @@
+/* Section Title */
+.our-services-section .box-wrapper h2 {
+    color: #005025;
+}
+
+/* Service Box Wrapper */
+.shape-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 400px;
+    box-shadow: 0 5px 15px rgba(202, 10, 10, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.shape-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Background Image */
+.shape-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+.shape-box:hover img {
+    transform: scale(1.1);
+}
+
+/* Strong Dark Overlay */
+.shape-box .brk-abs-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   background: linear-gradient(to top, rgba(2, 178, 213, 0.9) 0%, rgba(0,0,0,0.1) 60%); /* Darker overlay */
+    z-index: 0;
+}
+
+/* Caption Content Box */
+.shape-box figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #fff;
+    z-index: 3;
+    transition: all 0.4s ease;
+    background: rgba(0, 0, 0, 0.5);  /* Glassmorphism effect */
+    backdrop-filter: blur(5px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Title + Number Style */
+.shape-box .show-cont .card-no {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.shape-box .show-cont .card-main-title {
+    font-size: 22px;
+    margin-top: 5px;
+}
+
+/* Hidden Content Initially */
+.shape-box .card-content,
+.shape-box .read-more-btn {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+}
+
+/* Show on Hover */
+.shape-box:hover .card-content,
+.shape-box:hover .read-more-btn {
+    opacity: 1;
+    max-height: 200px;
+}
+
+/* Read More Button */
+.shape-box .read-more-btn {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 14px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.shape-box .read-more-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Decorative After Element */
+.shape-box .after {
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
+    background: #fff3;
+    border-radius: 50%;
+    z-index: 1;
+}

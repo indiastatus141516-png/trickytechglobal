@@ -1,0 +1,536 @@
+.about-us-section {
+    margin-top: 30px;
+    padding: var(--section-padding);
+}
+
+/* Title Heading Color */
+.about-us-section .title-one h2 {
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+/* Accent Line Under Heading */
+.about-us-section .title-one h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 4px;
+    background: var(--secondary-color);
+    border-radius: 2px;
+}
+
+/* Paragraph spacing improvement */
+.about-us-section .text-md {
+    line-height: 1.7;
+}
+
+/* List Styling */
+.about-us-section .list-style-one {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.about-us-section .list-style-one li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-weight: 500;
+    color: var(--dark-text);
+    transition: all 0.3s ease;
+}
+
+.about-us-section .list-style-one li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    color: var(--secondary-color);
+    font-size: 18px;
+}
+
+.about-us-section .list-style-one li:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* IMPROVED BUTTON */
+.about-us-section .btn-five {
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: var(--white-color) !important;
+    padding: 14px 35px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 60px !important; /* Increased spacing */
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.about-us-section .btn-five:hover {
+    background: linear-gradient(45deg, var(--accent-color), var(--primary-color));
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow);
+}
+
+/* IMPROVED IMAGE SECTION */
+.about-us-section .img-data {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.about-us-section .img-data .col-6 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.about-us-section .img-data img {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us-section .img-data img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.about-us-section .fs-18 {
+    font-size: 18px;
+}
+
+/* New styles for src/components/AboutUsPage/AboutUs.js */
+.about-page-main-content {
+    /* General styling for the entire About Us page */
+}
+
+.section-padding {
+    padding: var(--section-padding);
+}
+
+.about-page-hero {
+    background-image: linear-gradient(rgba(0, 80, 37, 0.7), rgba(0, 80, 37, 0.7)), url('https://t3.ftcdn.net/jpg/07/53/95/70/360_F_753957094_P7auPgXTtoyXqhFNWOIMUyl6dgm8sCUe.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--white-color);
+    padding: 120px 0;
+}
+
+.about-page-hero .hero-title {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.about-page-hero .breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.about-page-hero .breadcrumb-item {
+    font-size: 1.1rem;
+}
+
+.about-page-hero .breadcrumb-item a {
+    color: #c0c0c0;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.about-page-hero .breadcrumb-item a:hover {
+    color: var(--white-color);
+}
+
+.about-page-hero .breadcrumb-item.active {
+    color: var(--white-color);
+}
+
+.about-intro-section {
+    /* Uses section-padding now */
+}
+
+.about-intro-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-intro-text-block {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+}
+@media (max-width: 991.98px) {
+    .about-intro-text-block {
+        padding: 1.5rem;
+    }
+}
+
+.about-intro-text-block h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-intro-text-block p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.mission-vision-section {
+    padding: var(--section-padding);
+}
+
+.mission-vision-section h3 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+.mission-vision-card {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--card-border-radius);
+    padding: 35px;
+    margin: 25px 50px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    height: 100%; /* Ensure cards have equal height */
+}
+
+.mission-vision-card:hover {
+    background-color: #e4e0ff;
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.mission-vision-section .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mission-vision-card h5 {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.mission-vision-card p {
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+
+.why-choose-us-page-section {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: var(--section-padding);
+}
+
+.why-choose-us-page-section h3 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--white-color);
+}
+
+.why-choose-us-item {
+    padding: 2.5rem 1.5rem;
+    border-radius: var(--card-border-radius);
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.why-choose-us-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: var(--glass-shadow);
+}
+
+.why-choose-us-item .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 127, 0.2) 0%, rgba(0, 191, 88, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: #00ff7f; /* A bright green for the icon */
+    box-shadow: 0 0 15px rgba(0, 255, 127, 0.3);
+}
+
+.why-choose-us-item h6 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--white-color);
+}
+
+.why-choose-us-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    flex-grow: 1; /* Allows paragraph to take up remaining space */
+}
+
+.achievements-section {
+    padding: var(--section-padding);
+}
+
+.achievements-section h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.achievement-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-right: 1px solid var(--border-color);
+}
+
+.achievement-item:last-child {
+    border-right: none;
+}
+
+.achievement-item .achievement-number {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.achievement-item .achievement-label {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-section h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.team-member-card {
+    background-color: var(--white-color);
+    border-radius: var(--card-border-radius);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.team-member-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.team-member-info {
+    padding: 20px;
+}
+
+.team-member-info h5 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.team-member-info p {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.clients-section {
+    background-color: var(--light-bg);
+    overflow: hidden; /* Important for continuous slider */
+    padding: var(--section-padding);
+}
+
+.clients-section h3 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.client-logo {
+    padding: 0 25px; /* Spacing for logos in carousel */
+}
+
+
+
+.slick-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* About Page Footer Info (mini-footer) */
+.about-page-footer-info {
+    padding: 50px 0;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px; /* Spacing between columns */
+}
+
+.about-page-footer-info > div {
+    flex: 1;
+    min-width: 200px; /* Minimum width for columns before wrapping */
+}
+
+.about-page-footer-info .footer-logo-block img {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.about-page-footer-info .footer-logo-block p {
+    font-size: 0.95rem;
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.about-page-footer-info h5 {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.about-page-footer-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-page-footer-info ul li {
+    margin-bottom: 10px;
+}
+
+.about-page-footer-info ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.about-page-footer-info ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.about-page-footer-info .footer-contact-block p {
+    font-size: 0.95rem;
+    color: var(--light-text);
+    margin-bottom: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .about-page-hero .hero-title {
+        font-size: 2.8rem;
+    }
+    .about-intro-text-block h2 {
+        font-size: 2rem;
+    }
+    .about-intro-section .col-lg-6 {
+        margin-bottom: 30px;
+    }
+    .about-intro-section .col-lg-6:last-child {
+        margin-bottom: 0;
+    }
+    .about-page-footer-info > div {
+        flex-basis: 48%; /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page-hero {
+        padding: 80px 0;
+    }
+    .about-page-hero .hero-title {
+        font-size: 2.5rem;
+    }
+    .about-intro-text-block {
+        padding: 20px;
+    }
+    .about-intro-text-block h2 {
+        font-size: 1.8rem;
+    }
+    .about-intro-text-block p {
+        font-size: 1rem;
+    }
+    .why-choose-us-page-section .row > div {
+        margin-bottom: 1.5rem;
+    }
+    .why-choose-us-item {
+        padding: 2rem 1.5rem;
+    }
+    .mission-vision-section h3,
+    .how-we-work-section h3,
+    .why-choose-us-page-section h3,
+    .achievements-section h3 {
+        font-size: 1.8rem;
+    }
+    .achievement-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .about-page-footer-info > div {
+        flex-basis: 100%; /* Single column on small screens */
+        text-align: center;
+    }
+    .about-page-footer-info .footer-logo-block img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mission-vision-card {
+        margin: 15px 0;
+        padding: 25px;
+    }
+    .why-choose-us-item {
+        padding: 1.5rem 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-page-hero .hero-title {
+        font-size: 2rem;
+    }
+    .about-intro-text-block h2 {
+        font-size: 1.5rem;
+    }
+    .mission-vision-section h3,
+    .why-choose-us-page-section h3,
+    .achievements-section h3 {
+        font-size: 1.5rem;
+    }
+    .team-member-img {
+        height: 200px;
+    }
+    .achievement-item .achievement-number {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,209 @@
+/* General Header Styling */
+.theme-main-menu.sticky-menu {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Style for when the header becomes sticky */
+.theme-main-menu.sticky-menu.is-sticky {
+    background-color: #fff !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo-container {
+    position: relative;
+    z-index: 10; /* Ensures logo is above other nav items */
+}
+
+.logo-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100px; /* Adjusted for laptops */
+    width: auto;
+}
+
+.navbar-brand {
+    min-width: 220px; /* Adjusted for laptops */
+}
+
+/* Navigation Links */
+.theme-main-menu .nav-link {
+    position: relative; /* Required for the ::after pseudo-element */
+    transition: color 0.2s ease;
+    font-weight: 500;
+    color: #333;
+    padding: 0.5rem 0.8rem; /* Adjusted for laptops */
+    text-decoration: none;
+}
+
+/* Underline hover effect */
+.theme-main-menu .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secondary-color);
+    transition: width 0.3s ease-in-out;
+}
+
+.theme-main-menu .nav-link:hover,
+.theme-main-menu .nav-link.active {
+    color: var(--secondary-color) !important; /* Overrides Bootstrap's default active color */
+}
+
+.theme-main-menu .nav-link:hover::after,
+.theme-main-menu .nav-link.active::after {
+    width: 80%; /* Adjust width of the underline */
+}
+
+/* Dropdown Menu Styling */
+.theme-main-menu .dropdown-menu {
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    margin-top: 10px !important; /* Add some space from the nav item */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.theme-main-menu .dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.theme-main-menu .dropdown-item {
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.theme-main-menu .dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #00bf58;
+    transform: translateX(3px);
+}
+
+.theme-main-menu .dropdown-item.active,
+.theme-main-menu .dropdown-item:active {
+    background-color: #00bf58;
+    color: #fff !important;
+}
+
+/* Navbar Toggler (Hamburger Icon) */
+.navbar-toggler {
+    border: none;
+    padding: 0;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 1px;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler[aria-expanded="true"] .icon-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-toggler[aria-expanded="true"] .icon-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler[aria-expanded="true"] .icon-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Custom Navbar Collapse */
+@media (max-width: 991px) {
+    .custom-navbar-collapse {
+        margin-top: 1rem;
+        background-color: #f8f9fa;
+        border-radius: 0.5rem;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-navbar-collapse .nav-link {
+        padding: 0.75rem 1rem;
+        text-align: center;
+        border-radius: 0.25rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .custom-navbar-collapse .nav-link:hover {
+        background-color: #e9ecef;
+    }
+}
+
+/* Header CTA Button */
+.btn-five {
+    background-color: #00bf58;
+    color: #fff;
+    padding: 10px 25px; /* Adjusted for laptops */
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+     font-weight: 600; /* Bolder text */
+}
+
+.btn-five:hover {
+    background-color: #fff;
+    color: #005025;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 80, 37, 0.2);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .logo-img {
+        height: 60px;
+    }
+    .navbar-brand {
+        min-width: 150px;
+    }
+    .theme-main-menu .nav-link {
+        padding: 0.5rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    .btn-five {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    .custom-navbar-collapse {
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-img {
+        height: 50px;
+    }
+    .navbar-brand {
+        min-width: 120px;
+    }
+    .theme-main-menu .nav-link {
+        padding: 0.4rem 0.4rem;
+        font-size: 0.8rem;
+    }
+    .btn-five {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}

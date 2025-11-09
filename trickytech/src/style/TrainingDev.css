@@ -1,0 +1,472 @@
+
+.training-dev-page {
+  font-family: "Inter", 'Segoe UI', 'Roboto', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--white-color);
+  font-size: 15px;
+  overflow-x: hidden !important;
+  overflow: visible;
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+}
+
+/* Hero Section */
+.training-dev-page .hero-section1 {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  height: 20vh;
+  text-align: center;
+}
+
+.training-dev-page .hero-overlay1 {
+
+}
+
+.training-dev-page .hero-overlay1:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.training-dev-page .hero-title {
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.75);
+  letter-spacing: 1.2px;
+}
+
+.training-dev-page .hero-subtext {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #f1f1f1;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.95;
+}
+
+
+/* Training Overview Section */
+.training-overview-section {
+  padding: var(--section-padding);
+  background-color: var(--white-color);
+}
+
+.overview-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+.overview-image img {
+  max-width: 555px;
+  border-radius: 20px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .overview-image img {
+    border-radius: 20px;
+    max-width: 100%;
+  }
+}
+
+.overview-image img:hover {
+  transform: scale(1.03);
+  border-radius: 20px;
+  box-shadow: var(--card-hover-shadow);
+}
+
+.overview-content {
+  flex: 1 1 400px;
+}
+
+.overview-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.overview-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: var(--light-text);
+}
+
+.overview-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.overview-list li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+.overview-list li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+
+.btn.btn-primary {
+  background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+  color: var(--white-color) !important;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(0, 191, 88, 0.3);
+}
+
+.btn.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 80, 37, 0.4);
+}
+
+/* Training and Hiring Section */
+.training-hiring-section {
+  background-color: var(--light-bg);
+  padding: var(--section-padding);
+}
+
+.hiring-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 60px;
+}
+
+.hiring-content {
+  flex: 1 1 400px;
+}
+
+.hiring-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 25px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.hiring-content p {
+  font-size: 1.1rem;
+  color: var(--light-text);
+}
+
+.hiring-image img {
+  max-width: 500px;
+  border-radius: 20px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hiring-image img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--card-hover-shadow);
+ 
+
+}
+
+@media (max-width: 768px) {
+  .hiring-image img {
+    max-width: 100%;
+  border-radius: 20px;
+
+  }
+}
+
+/* Accordion Section */
+.training-features-section {
+  background-color: var(--white-color);
+  padding: var(--section-padding);
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 30px;
+}
+
+.features-image img {
+  max-width: 600px;
+  height: auto;
+  border-radius: 20px;;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-image img:hover {
+  transform: scale(1.03);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.features-accordions {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion-item {
+  background: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--card-radius);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: var(--card-shadow);
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  padding: 15px 30px;
+}
+
+.accordion-header h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.accordion-header span {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  padding: 0 15px 30px;
+  font-size: 1.05rem;
+  color: var(--light-text);
+  border-top: 1px solid var(--border-color);
+  margin: 0 20px;
+}
+
+/* How It Works Section */
+.how-it-works-section {
+  background-color: var(--light-bg);
+  padding: var(--section-padding);
+  text-align: center;
+}
+
+.how-it-works-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.how-step {
+  flex: 1 1 280px;
+  background-color: var(--white-color);
+  padding: 35px 25px;
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.how-step:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--card-hover-shadow);
+}
+
+.step-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+
+.how-step h4 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.how-step p {
+  font-size: 1rem;
+  color: var(--light-text);
+}
+
+/* FAQ Section */
+.faq-section {
+  background-color: var(--white-color);
+  padding: var(--section-padding);
+}
+
+.faq-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.faq-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+}
+
+.faq-item {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .overview-container,
+  .hiring-container,
+  .how-it-works-container {
+    gap: 40px;
+  }
+  .overview-content h2,
+  .hiring-content h2,
+  .faq-container h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+  .hero-subtext {
+    font-size: 1.1rem;
+  }
+  .overview-content h2,
+  .hiring-content h2,
+  .faq-container h2 {
+    font-size: 2rem;
+  }
+  .overview-container,
+  .hiring-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .how-it-works-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section1 {
+    height: 40vh;
+    min-height: 300px;
+  }
+  .hero-overlay1 {
+    padding: 30px 20px;
+    max-width: 95%;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtext {
+    font-size: 1rem;
+  }
+  .training-overview-section,
+  .training-hiring-section,
+  .training-features-section,
+  .how-it-works-section,
+  .faq-section {
+    padding: 40px 0;
+  }
+  .overview-content h2,
+  .hiring-content h2,
+  .faq-container h2 {
+    font-size: 1.8rem;
+  }
+  .overview-content p,
+  .hiring-content p {
+    font-size: 1rem;
+  }
+  .how-step {
+    padding: 25px 20px;
+  }
+  .step-number {
+    font-size: 2rem;
+  }
+  .how-step h4 {
+    font-size: 1.1rem;
+  }
+  .accordion-header h3 {
+    font-size: 1.3rem;
+  }
+  .features-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .features-image img {
+    max-width: 100%;
+  border-radius: 20px;
+
+  }
+  .btn.btn-primary {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .overview-content h2,
+  .hiring-content h2,
+  .faq-container h2 {
+    font-size: 1.5rem;
+  }
+  .how-step h4 {
+    font-size: 1rem;
+  }
+  .faq-question {
+    font-size: 1.1rem;
+  }
+}

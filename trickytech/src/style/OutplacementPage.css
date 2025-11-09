@@ -1,0 +1,422 @@
+/* Main Styles */
+.outplacement-page {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.outplacement-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero Banner */
+.outplacement-page .hero-banner {
+  background: linear-gradient(120deg, #1d4636 0%, #2e7c4e 100%);
+  padding: 6rem 0; /* Increased padding */
+  color: white;
+}
+
+.outplacement-page .hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.outplacement-page .hero-content {
+  flex: 1;
+  text-align: left;
+}
+
+.outplacement-page .hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.outplacement-page .hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+}
+
+.outplacement-page .hero-banner h1 {
+  font-size: 3.5rem; /* Increased font size */
+  font-weight: 700;
+  margin: 0;
+}
+
+.outplacement-page .hero-subtitle {
+  font-size: 1.5rem; /* Increased font size */
+  margin: 1.5rem 0 2rem;
+  opacity: 0.9;
+}
+
+.outplacement-page .hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+/* Introduction Section */
+.outplacement-page .intro-section {
+  padding: 8rem 0; /* Increased padding */
+  background: #ffffff;
+}
+
+.outplacement-page .intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.outplacement-page .intro-content h2 {
+  font-size: 2.8rem; /* Increased font size */
+  color: #1d4636;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.outplacement-page .intro-content p {
+  font-size: 1.125rem;
+  color: #555;
+}
+
+.outplacement-page .intro-image img {
+  width: 100%;
+  border-radius: 1.25rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Section Tag */
+.outplacement-page .section-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #e8f5e9;
+  color: #2e7c4e;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* Services Section */
+.outplacement-page .services-section {
+  padding: 6rem 0; /* Increased padding */
+  background: white;
+}
+
+.outplacement-page .section-title {
+  text-align: center;
+  font-size: 2.5rem; /* Increased font size */
+  color: #1d4636;
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.outplacement-page .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.outplacement-page .service-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.outplacement-page .service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.outplacement-page .icon-wrapper {
+  width: 5rem;
+  height: 5rem;
+  background: #e8f5e9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+}
+
+.outplacement-page .icon-wrapper i {
+  font-size: 2rem;
+  color: #2e7c4e;
+}
+
+.outplacement-page .service-card h3 {
+  font-size: 1.5rem;
+  color: #1d4636;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.outplacement-page .service-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Trust Indicators */
+.outplacement-page .trust-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.outplacement-page .trust-item {
+  text-align: center;
+}
+
+.outplacement-page .trust-number {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #2e7c4e;
+  display: block;
+}
+
+/* Process Timeline */
+.outplacement-page .process-timeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.outplacement-page .timeline-item {
+  position: relative;
+  padding: 2rem;
+  background: white;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.outplacement-page .timeline-item:hover {
+  transform: translateY(-10px);
+}
+
+.outplacement-page .step-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e8f5e9;
+  margin-bottom: 1.25rem;
+}
+
+/* Benefits Tabs */
+.outplacement-page .benefits-tabs {
+  margin-top: 2.5rem;
+  background: white;
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.outplacement-page .tab-headers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.outplacement-page .tab-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  transition: color 0.3s, border-bottom 0.3s;
+  border-bottom: 3px solid transparent;
+}
+
+.outplacement-page .tab-btn.active {
+  color: #2e7c4e;
+  border-bottom: 3px solid #2e7c4e;
+}
+
+.outplacement-page .benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.outplacement-page .benefits-list li {
+  padding: 1rem 0;
+  padding-left: 2rem;
+  position: relative;
+  font-size: 1.125rem;
+  color: #444;
+}
+
+.outplacement-page .benefits-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #2e7c4e;
+  font-weight: bold;
+}
+
+/* Success Stories */
+.outplacement-page .stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.outplacement-page .story-card {
+  background: white;
+  border-radius: 1.25rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.outplacement-page .story-card:hover {
+  transform: translateY(-10px);
+}
+
+.outplacement-page .story-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.outplacement-page .story-content {
+  padding: 1.5rem;
+}
+
+.outplacement-page .transition-time {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #e8f5e9;
+  color: #2e7c4e;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  margin-top: 1rem;
+}
+
+/* CTA Section */
+.outplacement-page .cta-section {
+  background: linear-gradient(120deg, #1d4636 0%, #2e7c4e 100%);
+  padding: 6rem 0; /* Increased padding */
+  text-align: center;
+  color: white;
+}
+
+.outplacement-page .cta-content h2 {
+  font-size: 2.5rem; /* Increased font size */
+  margin-bottom: 1.25rem;
+}
+
+.outplacement-page .cta-content p {
+  font-size: 1.125rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .outplacement-page .container {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .outplacement-page .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .outplacement-page .hero-content {
+    text-align: center;
+  }
+
+  .outplacement-page .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .outplacement-page .hero-banner h1 {
+    font-size: 3rem; /* Adjusted font size */
+  }
+
+  .outplacement-page .intro-content h2,
+  .outplacement-page .section-title,
+  .outplacement-page .cta-content h2 {
+    font-size: 2.25rem; /* Adjusted font size */
+  }
+}
+
+@media (max-width: 768px) {
+  .outplacement-page .hero-banner {
+    padding: 5rem 0; /* Adjusted padding */
+  }
+
+  .outplacement-page .intro-section,
+  .outplacement-page .services-section,
+  .outplacement-page .cta-section {
+    padding: 5rem 0; /* Adjusted padding */
+  }
+
+  .outplacement-page .service-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .outplacement-page .tab-headers {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .outplacement-page .tab-btn {
+    text-align: center;
+  }
+
+  .outplacement-page .experience-badge {
+    position: static;
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .outplacement-page .hero-banner h1 {
+    font-size: 2.5rem; /* Adjusted font size */
+  }
+
+  .outplacement-page .hero-subtitle {
+    font-size: 1.25rem; /* Adjusted font size */
+  }
+
+  .outplacement-page .intro-content h2,
+  .outplacement-page .section-title,
+  .outplacement-page .cta-content h2 {
+    font-size: 2rem; /* Adjusted font size */
+  }
+
+  .outplacement-page .intro-content p,
+  .outplacement-page .service-card p,
+  .outplacement-page .cta-content p {
+    font-size: 1rem;
+  }
+  
+  .outplacement-page .benefits-list li {
+    font-size: 1rem;
+  }
+}

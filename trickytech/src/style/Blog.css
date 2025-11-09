@@ -1,0 +1,92 @@
+.blog-section {
+    background-color: #f8f9fa;
+}
+
+.blog-section .title-one h2 {
+    color: #005025;
+}
+
+/* Card Styling */
+.blog-meta-one {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease-in-out;
+}
+
+.blog-meta-one:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 80, 37, 0.1);
+    border-color: transparent;
+}
+
+/* Image Styling */
+.blog-meta-one .post-img {
+    overflow: hidden;
+}
+
+.blog-meta-one .post-img img {
+    transition: transform 0.4s ease;
+}
+
+.blog-meta-one:hover .post-img img {
+    transform: scale(1.05);
+}
+
+/* Content Styling */
+.blog-meta-one .post-data {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.blog-meta-one .date {
+    color: #00bf58;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.blog-meta-one .blog-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #005025;
+    text-decoration: none;
+    display: block;
+    line-height: 1.4;
+    flex-grow: 1; /* Pushes the "Read More" button to the bottom */
+}
+
+.blog-meta-one .blog-title:hover {
+    color: #00bf58;
+}
+
+/* Read More Button */
+.btn-seven {
+    color: #00bf58;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: color 0.3s ease;
+}
+
+.btn-seven::after {
+    content: ' →';
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn-seven:hover {
+    color: #005025;
+}
+
+.btn-seven:hover::after {
+    transform: translateX(5px);
+}

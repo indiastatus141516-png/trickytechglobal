@@ -1,0 +1,80 @@
+.why-choose-us-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.why-choose-us-section .title-one h2 {
+    color: #005025;
+}
+
+.why-choose-us-section .sub-title {
+    color: #00bf58;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Image Styling */
+.why-choose-us-section .img-illustration {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 80, 37, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.why-choose-us-section .img-illustration:hover {
+    transform: scale(1.03);
+}
+
+/* Accordion Styling */
+.why-choose-us-section .accordion-item {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px !important;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: box-shadow 0.3s ease;
+}
+
+.why-choose-us-section .accordion-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.why-choose-us-section .accordion-header {
+    font-weight: 600;
+}
+
+.why-choose-us-section .accordion-button {
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    background-color: #fff;
+    box-shadow: none !important;
+}
+
+.why-choose-us-section .accordion-button:focus {
+    border-color: transparent;
+}
+
+.why-choose-us-section .accordion-button:not(.collapsed) {
+    color: #005025;
+    background-color: #e6f7ff;
+}
+
+.why-choose-us-section .accordion-button::after {
+    content: '+';
+    font-size: 24px;
+    font-weight: bold;
+    background-image: none;
+    transform: rotate(0);
+    transition: transform 0.3s ease;
+}
+
+.why-choose-us-section .accordion-button:not(.collapsed)::after {
+    content: '−';
+    transform: rotate(0);
+}
+
+.why-choose-us-section .accordion-body {
+    background-color: #fff;
+    padding: 15px 20px;
+}

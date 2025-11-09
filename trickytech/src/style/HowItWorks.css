@@ -1,0 +1,76 @@
+.how-it-works-section {
+    background-color: #f8f9fa;
+    padding: 40px 0 80px; /* Adjusted top padding for consistent spacing */
+}
+
+.how-it-works-section .title-one h2 {
+    color: #005025;
+}
+
+.how-it-works-section .title-one .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.how-it-works-section .card-style-five {
+    padding: 30px 25px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    height: 100%;
+}
+
+.how-it-works-section .card-style-five:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 80, 37, 0.1);
+    border-color: transparent;
+}
+
+.how-it-works-section .numb {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #00c853;
+    border-radius: 50%;
+    color: #00c853;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.how-it-works-section .card-style-five:hover .numb {
+    background-color: #00c853;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.how-it-works-section .card-style-five .title {
+    color: #005025;
+    font-size: 20px;
+}
+
+/* Connecting Lines */
+.how-it-works-section .card-style-five.step-one::after,
+.how-it-works-section .card-style-five.step-two::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    right: -50%;
+    width: 100%;
+    height: 2px;
+    background: repeating-linear-gradient(
+        90deg,
+        #00c853,
+        #00c853 6px,
+        transparent 6px,
+        transparent 12px
+    );
+    z-index: -1;
+}
+
+/* Hide line on the last card and on smaller screens */
+@media (max-width: 991.98px) {
+    .how-it-works-section .card-style-five::after {
+        display: none;
+    }
+}

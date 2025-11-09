@@ -1,0 +1,140 @@
+.footer-one {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer-one .inner-wrapper {
+    padding-top: 40px;
+}
+
+.footer-intro .logo img {
+    max-width: 200px;
+    height: auto;
+}
+
+.footer-intro p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.footer-title {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #005025;
+    font-size: 18px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #00bf58;
+    transition: width 0.3s ease;
+}
+
+.footer-title:hover::after {
+    width: 50px;
+}
+
+.footer-nav-link li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.footer-nav-link li a {
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-nav-link li a:hover {
+    color: #00bf58;
+    transform: translateX(5px);
+}
+
+/* Contact Info Specifics */
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-info .address-line {
+    color: #555;
+}
+
+.bottom-footer {
+    background-color: #005025;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.bottom-footer p {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Bottom Social Icons */
+.social-icon-bottom {
+    padding-left: 0; /* Remove default padding */
+    list-style: none; /* Remove bullet points */
+}
+
+.social-icon-bottom li a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+.contact-info li a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-icon-bottom li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.social-icon-bottom img {
+    width: 18px;
+    height: 18px;
+}
+
+.contact-icon {
+    width: 20px;
+    margin-right: 12px;
+    filter: invert(48%) sepia(90%) saturate(1450%) hue-rotate(125deg) brightness(95%) contrast(101%); /* Applies #00bf58 color */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .footer-one .inner-wrapper {
+        padding-top: 50px;
+    }
+
+    .footer-intro,
+    .footer-one .col-sm-4 {
+        text-align: center;
+    }
+
+    .social-icon-bottom {
+        justify-content: center;
+    }
+
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

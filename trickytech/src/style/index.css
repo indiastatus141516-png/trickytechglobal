@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #005025; /* Deep Green */
+  --secondary-color: #00bf58; /* Bright Green */
+  --dark-color: #222;
+  --light-gray: #f0f2f5;
+  --white-color: #ffffff;
+  --text-color: #4a4a4a;
+  --section-padding: 80px 0;
+  --container-width: 90%;
+  --max-container-width: 1200px;
+  --card-border-radius: 15px;
+  --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  --border-color: #e0e0e0;
+  --light-bg: #f8f9fa;
+  --light-text: #6c757d;
+  --dark-text: #333;
+  --accent-color: #00c853;
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  --card-hover-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Responsive base styles */
+@media (max-width: 1200px) {
+  :root {
+    --section-padding: 60px 0;
+    --max-container-width: 1000px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-padding: 40px 0;
+    --container-width: 95%;
+    --max-container-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --section-padding: 30px 0;
+  }
+}

@@ -1,0 +1,75 @@
+.hero-section {
+    background: rgb(0,0,0);
+    background: linear-gradient(351deg, rgba(0,0,0,1) 18%, rgba(19,217,111,1) 81%);
+    color: var(--white-color);
+    padding: var(--section-padding);
+}
+
+.hero-section h5, .hero-section p, .hero-section span {
+    color: var(--white-color);
+}
+
+.hero-section h3 {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.hero-section .btn-join {
+    color: var(--white-color);
+    background-color: var(--secondary-color);
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .btn-join:hover {
+    background-color: var(--primary-color);
+}
+
+.hero-section .btn-explore {
+    color: var(--white-color);
+    border: 1px solid var(--white-color);
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-section .btn-explore:hover {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+}
+
+.new-f-section {
+    width: 550px;
+    max-width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .hero-section h3 {
+        font-size: 35px;
+    }
+    .new-f-section {
+        width: 100%;
+    }
+    .hero-section .btn-join,
+    .hero-section .btn-explore {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h3 {
+        font-size: 28px;
+    }
+    .hero-section {
+        padding: 40px 0;
+    }
+}

@@ -1,0 +1,483 @@
+
+/* ===================================================================
+    01. Root Variables & General Styles
+=================================================================== */
+:root {
+  --primary-color: #005025; /* Deep Green */
+  --secondary-color: #00bf58; /* Bright Green */
+  --dark-color: #222;
+  --light-gray: #f0f2f5;
+  --white-color: #ffffff;
+  --text-color: #4a4a4a;
+  --section-padding: 80px 0;
+  --container-width: 90%;
+  --max-container-width: 1200px;
+  --card-border-radius: 15px;
+  --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+.career-page {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--white-color);
+}
+
+/* ===================================================================
+    02. Reusable Components (Buttons, Titles)
+=================================================================== */
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  color: #6c757d;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  border-color: var(--secondary-color);
+  box-shadow: 0 4px 15px rgba(0, 191, 88, 0.3);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 80, 37, 0.4);
+}
+
+.btn-outline-primary {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--secondary-color);
+  color: var(--white-color);
+  transform: translateY(-3px);
+}
+
+/* Know More Button Style */
+.btn-five {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--white-color) !important;
+    padding: 14px 35px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-five:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-shadow);
+}
+
+/* ===================================================================
+    03. Hero Banner Section
+=================================================================== */
+.career-banner {
+  background: linear-gradient(45deg, rgba(0, 80, 37, 0.8), rgba(0, 191, 88, 0.7)), url('/public/images/b-1.jpg') no-repeat center center/cover;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white-color);
+  padding: 0 20px;
+}
+
+.career-banner .banner-content h2 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================================================
+    04. Introduction Section
+=================================================================== */
+.career-intro {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: var(--section-padding);
+  width: var(--container-width);
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+}
+
+.career-intro .intro-images {
+  flex: 1.1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.career-intro .intro-images img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--card-border-radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.career-intro .intro-images img:hover {
+  transform: scale(1.03);
+}
+
+.career-intro .intro-text {
+  flex: 1;
+  text-align: left;
+}
+
+.career-intro .intro-text .subtitle {
+  color: var(--secondary-color);
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.career-intro .intro-text h3 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.career-intro .intro-text p {
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+/* ===================================================================
+    05. Services Section (Glassmorphism Cards)
+=================================================================== */
+.career-services {
+  padding: var(--section-padding);
+  background-color: var(--light-gray);
+  /* Add a subtle pattern or gradient for the glass effect to pop */
+  background-image: linear-gradient(135deg, #f0f2f5 0%, #e6e9ee 100%);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: var(--container-width);
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+}
+
+.service-card {
+  /* Glassmorphism */
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  
+  padding: 35px 30px;
+  text-align: center;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+}
+
+.service-card .service-icon {
+  margin-bottom: 20px;
+  background-color: rgba(0, 191, 88, 0.1);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-card .service-icon img {
+  width: 60px;
+  height: 60px;
+  filter: invert(24%) sepia(21%) saturate(3754%) hue-rotate(120deg) brightness(95%) contrast(101%); /* Converts icon to --primary-color */
+}
+
+.service-card h4 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* ===================================================================
+    06. Detailed Services Section
+=================================================================== */
+.career-detailed {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: var(--section-padding);
+  width: var(--container-width);
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+  background-color: var(--white-color);
+}
+.career-detailed .detailed-text {
+  flex: 1;
+}
+
+.career-detailed .detailed-text h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.career-detailed .detailed-text p {
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.career-detailed .detailed-text ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.career-detailed .detailed-text ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 30px;
+  font-weight: 500;
+}
+
+.career-detailed .detailed-text ul li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+
+.career-detailed .detailed-image {
+  flex: 1;
+}
+
+.career-detailed .detailed-image img {
+  width: 100%;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+}
+
+/* ===================================================================
+    07. Achievements Section
+=================================================================== */
+.career-achievements {
+  padding: var(--section-padding);
+  background-color: var(--light-gray);
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: var(--container-width);
+  max-width: var(--max-container-width);
+  margin: 0 auto;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 35px 30px;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card .achievement-number {
+  position: absolute;
+  top: -15px;
+  right: 10px;
+  font-size: 6rem;
+  font-weight: 800;
+  color: rgba(0, 80, 37, 0.08);
+  z-index: 1;
+}
+
+.achievement-card h4,
+.achievement-card p {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.achievement-card h4 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* ===================================================================
+    08. FAQ, Testimonials, Blog (Shared Styling)
+=================================================================== */
+.career-page .testimonial-section-one,
+.career-page .faq-section,
+.career-page .blog-section {
+  padding: var(--section-padding);
+}
+
+.career-page .faq-section {
+  background-color: var(--white-color);
+}
+
+/* FAQ Section Specifics */
+.career-page .faq-section .accordion-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.career-page .faq-section .accordion-button {
+  background-color: var(--white-color);
+  color: var(--dark-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background-color 0.3s ease;
+}
+
+.career-page .faq-section .accordion-button:not(.collapsed) {
+  background-color: rgba(0, 191, 88, 0.05);
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+.career-page .faq-section .accordion-button::after {
+  /* This is for Bootstrap's default icon */
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.career-page .faq-section .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23005025'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.career-page .faq-section .accordion-body {
+  padding: 0 20px 20px 20px;
+  background-color: var(--white-color);
+  color: var(--text-color);
+}
+
+/* ===================================================================
+    09. Animations (for wow.js)
+=================================================================== */
+
+/* ===================================================================
+    10. Responsive Design
+=================================================================== */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+    .career-intro {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 0;
+    }
+    .career-intro .intro-images {
+        grid-template-columns: 1fr;
+    }
+    .career-intro .intro-text h3 {
+        font-size: 2rem;
+    }
+    .career-detailed {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .career-detailed .detailed-text h2 {
+        font-size: 2rem;
+    }
+    .services-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .service-card,
+    .achievement-card {
+        padding: 25px 20px;
+    }
+    .career-banner .banner-content h2 {
+        font-size: 2.5rem;
+    }
+    .career-banner {
+        height: 25vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .career-intro .intro-text h3 {
+        font-size: 1.8rem;
+    }
+    .career-detailed .detailed-text h2 {
+        font-size: 1.8rem;
+    }
+    .career-banner .banner-content h2 {
+        font-size: 2rem;
+    }
+    .career-banner {
+        height: 20vh;
+    }
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    .btn-five {
+        padding: 12px 25px;
+    }
+}

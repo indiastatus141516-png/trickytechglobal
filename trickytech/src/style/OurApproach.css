@@ -1,0 +1,194 @@
+/* General Styles */
+.our-approach-page {
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.our-approach-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero Banner */
+.our-approach-page .hero-banner {
+  background: linear-gradient(120deg, #1d4636 0%, #2e7c4e 100%);
+  padding: 6rem 0;
+  color: white;
+}
+
+.our-approach-page .hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.our-approach-page .hero-content {
+  flex: 1;
+  text-align: left;
+}
+
+.our-approach-page .hero-image {
+  flex: 1;
+  text-align: center;
+}
+
+.our-approach-page .hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+}
+
+.our-approach-page .hero-banner h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.our-approach-page .hero-subtitle {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 0;
+  opacity: 0.9;
+}
+
+/* Introduction Section */
+.our-approach-page .intro-section {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+.our-approach-page .intro-content p {
+  max-width: 800px;
+  margin: 1rem auto 0;
+  font-size: 1.125rem;
+  color: #555;
+}
+
+/* Section Tag */
+.our-approach-page .section-tag {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #e8f5e9;
+  color: #2e7c4e;
+  border-radius: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.our-approach-page .section-title {
+    font-size: 2.5rem;
+    color: #1d4636;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+
+/* Mission & Vision Section */
+.our-approach-page .mission-vision-section {
+  padding: 6rem 0;
+}
+
+.our-approach-page .mission-vision-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+
+.our-approach-page .mission-vision-card h5 {
+  font-size: 1.75rem;
+  color: #1d4636;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Core Values Section */
+.our-approach-page .core-values-section {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+.our-approach-page .values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.our-approach-page .value-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1.25rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-approach-page .value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+.our-approach-page .value-icon {
+  font-size: 3rem;
+  color: #2e7c4e;
+  margin-bottom: 1.5rem;
+}
+
+.our-approach-page .value-card h3 {
+  font-size: 1.5rem;
+  color: #1d4636;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .our-approach-page .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .our-approach-page .hero-content {
+    text-align: center;
+  }
+
+  .our-approach-page .hero-banner h1 {
+    font-size: 3rem;
+  }
+
+  .our-approach-page .section-title,
+  .our-approach-page .intro-content h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .our-approach-page .hero-banner {
+    padding: 5rem 0;
+  }
+
+  .our-approach-page .intro-section,
+  .our-approach-page .mission-vision-section,
+  .our-approach-page .core-values-section {
+    padding: 5rem 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .our-approach-page .hero-banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .our-approach-page .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .our-approach-page .section-title,
+  .our-approach-page .intro-content h2 {
+    font-size: 2rem;
+  }
+}
