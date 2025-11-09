@@ -37,7 +37,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/agreements", agreementRoutes);
 
 // Health check route
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.send("✅ API running");
 });
 
