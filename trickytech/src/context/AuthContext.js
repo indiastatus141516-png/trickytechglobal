@@ -1,7 +1,10 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext, useEffect, useCallback } from 'react';
 import axios from 'axios';
 
 const AuthContext = createContext(null);
+
+// ✅ get backend URL from ENV (Vercel will use process.env.REACT_APP_API_URL)
+const API_BASE_URL = process.env.REACT_APP_API_URL ;
 
 export const AuthProvider = ({ children }) => {
     const [authState, setAuthState] = useState({
@@ -13,19 +16,31 @@ export const AuthProvider = ({ children }) => {
         error: null
     });
 
-    const fetchUser = async () => {
+    const logout = useCallback(() => {
+        localStorage.removeItem('token');
+        delete axios.defaults.headers.common['x-auth-token'];
+        setAuthState({
+            token: null,
+            isAuthenticated: false,
+            loading: false,
+            user: null,
+            error: null
+        });
+    }, []);
+
+    const fetchUser = useCallback(async () => {
         try {
-            const res = await axios.get('http://localhost:5000/api/users/me');
+            const res = await axios.get(`${API_BASE_URL}/api/users/me`);
             setAuthState(prev => ({
                 ...prev,
                 user: res.data.user,
                 loading: false
             }));
         } catch (err) {
-            // Invalid token, logout
-            logout();
+            logout(); // ✅ safe, logout is dependency now
         }
-    };
+    }, [logout]);
+
 
     useEffect(() => {
         const token = localStorage.getItem('token');
@@ -41,7 +56,7 @@ export const AuthProvider = ({ children }) => {
                 error: null
             });
         }
-    }, []);
+    }, [fetchUser]);
 
     const login = async (email, password) => {
         const config = {
@@ -53,11 +68,13 @@ export const AuthProvider = ({ children }) => {
         const body = JSON.stringify({ email, password });
 
         try {
-            const res = await axios.post('http://localhost:5000/api/users/login', body, config);
+            const res = await axios.post(`${API_BASE_URL}/api/users/login`, body, config);
+
             localStorage.setItem('token', res.data.token);
             axios.defaults.headers.common['x-auth-token'] = res.data.token;
-            // determine whether to show profile modal after login
+
             const showModal = !!(res.data.user && (res.data.user.isFirstLogin || !res.data.user.isProfileCompleted));
+
             setAuthState(prev => ({
                 ...prev,
                 isAuthenticated: true,
@@ -68,28 +85,12 @@ export const AuthProvider = ({ children }) => {
                 error: null
             }));
         } catch (err) {
-            let errorMessage = 'Login failed';
-            if (err.response && err.response.data && err.response.data.msg) {
-                errorMessage = err.response.data.msg;
-            }
-            setAuthState({
-                ...authState,
-                error: errorMessage
-            });
-            throw new Error(errorMessage);
+            setAuthState(prev => ({
+                ...prev,
+                error: err.response?.data?.msg || "Login failed"
+            }));
+            throw err;
         }
-    };
-
-    const logout = () => {
-        localStorage.removeItem('token');
-        delete axios.defaults.headers.common['x-auth-token'];
-        setAuthState({
-            token: null,
-            isAuthenticated: false,
-            loading: false,
-            user: null,
-            error: null
-        });
     };
 
     const updateProfile = async (profileData) => {
@@ -102,18 +103,14 @@ export const AuthProvider = ({ children }) => {
 
         const body = JSON.stringify({ profileData });
 
-        try {
-            const res = await axios.put('http://localhost:5000/api/users/profile/update', body, config);
-            // update user and hide modal if profile is now completed
-            setAuthState(prev => ({
-                ...prev,
-                user: res.data.user,
-                showProfileModal: !(res.data.user && res.data.user.isProfileCompleted) // keep modal open if still incomplete
-            }));
-            return res.data;
-        } catch (err) {
-            throw err;
-        }
+        const res = await axios.put(`${API_BASE_URL}/api/users/profile/update`, body, config);
+        setAuthState(prev => ({
+            ...prev,
+            user: res.data.user,
+            showProfileModal: !(res.data.user && res.data.user.isProfileCompleted)
+        }));
+
+        return res.data;
     };
 
     const signAgreement = async () => {
@@ -124,37 +121,30 @@ export const AuthProvider = ({ children }) => {
             }
         };
 
-        try {
-            const res = await axios.post('http://localhost:5000/api/users/agreement/sign', {}, config);
-            setAuthState(prev => ({
-                ...prev,
-                user: res.data.user
-            }));
-            return res.data;
-        } catch (err) {
-            throw err;
-        }
+        const res = await axios.post(`${API_BASE_URL}/api/users/agreement/sign`, {}, config);
+        setAuthState(prev => ({
+            ...prev,
+            user: res.data.user
+        }));
+        return res.data;
     };
 
-    const setShowProfileModal = (val) => {
+    const setShowProfileModal = (val) =>
         setAuthState(prev => ({ ...prev, showProfileModal: !!val }));
-    };
 
-    const setError = (errorMessage) => {
+    const setError = (errorMessage) =>
         setAuthState(prev => ({ ...prev, error: errorMessage }));
-    };
 
-    const clearError = () => {
+    const clearError = () =>
         setAuthState(prev => ({ ...prev, error: null }));
-    };
 
     return (
-        <AuthContext.Provider value={{ authState, login, logout, updateProfile, signAgreement, setError, clearError, setShowProfileModal }}>
+        <AuthContext.Provider
+            value={{ authState, login, logout, updateProfile, signAgreement, setError, clearError, setShowProfileModal }}
+        >
             {children}
         </AuthContext.Provider>
     );
 };
 
-export const useAuth = () => {
-    return useContext(AuthContext);
-};
+export const useAuth = () => useContext(AuthContext);

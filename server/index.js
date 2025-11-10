@@ -26,7 +26,7 @@ app.use(cors());
 app.use(express.json());
 
 // static uploads if needed
-app.use("/uploads", express.static(path.join(__dirname, "../uploads")));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 // API Routes
 app.use("/api/services", servicesRouter);
@@ -37,7 +37,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/agreements", agreementRoutes);
 
 // Health check route
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.send("✅ API running");
 });
 

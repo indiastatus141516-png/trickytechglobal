@@ -11,19 +11,18 @@ const BlogDetail = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
+        const fetchBlog = async () => {
+            try {
+                const res = await axios.get(`${backendUrl}/api/blogs/${slug}`);
+                setBlog(res.data);
+            } catch (err) {
+                console.error('Error fetching blog:', err);
+            } finally {
+                setLoading(false);
+            }
+        };
         fetchBlog();
     }, [slug]);
-
-    const fetchBlog = async () => {
-        try {
-            const res = await axios.get(`${backendUrl}/api/blogs/${slug}`);
-            setBlog(res.data);
-        } catch (err) {
-            console.error('Error fetching blog:', err);
-        } finally {
-            setLoading(false);
-        }
-    };
 
     const formatDate = (dateString) => {
         return new Date(dateString).toLocaleDateString('en-US', {
