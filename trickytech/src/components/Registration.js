@@ -78,7 +78,7 @@ const Registration = () => {
 
       const body = JSON.stringify(newUser);
 
-      const res = await axios.post({backendUrl}+'/api/users/register', body, config);
+      const res = await axios.post(`${backendUrl}/api/users/register`, body, config);
       console.log(res.data);
       navigate('/login');
     } catch (err) {
