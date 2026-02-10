@@ -10,20 +10,23 @@
 }
 
 .logo-container {
-    position: relative;
-    z-index: 10; /* Ensures logo is above other nav items */
-}
-
-.logo-img {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 100px; /* Adjusted for laptops */
-    width: auto;
+    display: flex;
+    align-items: center;
+    z-index: 10;
 }
 
 .navbar-brand {
-    min-width: 220px; /* Adjusted for laptops */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    padding: 0;
+}
+
+.logo-img {
+    height: 68px;
+    width: auto;
+    object-fit: contain;
 }
 
 /* Navigation Links */
@@ -96,14 +99,17 @@
 
 /* Navbar Toggler (Hamburger Icon) */
 .navbar-toggler {
-    border: none;
-    padding: 0;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
 
 .navbar-toggler:focus {
     box-shadow: none;
+    border-color: #00bf58;
 }
 
 .navbar-toggler .icon-bar {
@@ -131,11 +137,22 @@
 /* Custom Navbar Collapse */
 @media (max-width: 991px) {
     .custom-navbar-collapse {
-        margin-top: 1rem;
+        position: fixed;
+        top: 72px;
+        right: 0;
+        height: auto;
+        max-height: calc(100vh - 88px);
+        width: min(82vw, 340px);
+        margin-top: 0;
         background-color: #f8f9fa;
-        border-radius: 0.5rem;
-        padding: 1rem;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 12px 0 0 12px;
+        padding: 1rem 0.75rem;
+        box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.25s ease, transform 0.25s ease;
+        overflow-y: auto;
+        z-index: 1050;
     }
 
     .custom-navbar-collapse .nav-link {
@@ -147,6 +164,11 @@
 
     .custom-navbar-collapse .nav-link:hover {
         background-color: #e9ecef;
+    }
+
+    .custom-navbar-collapse.show {
+        opacity: 1;
+        transform: translateX(0);
     }
 }
 
@@ -172,10 +194,10 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
     .logo-img {
-        height: 60px;
+        height: 56px;
     }
     .navbar-brand {
-        min-width: 150px;
+        min-width: 0;
     }
     .theme-main-menu .nav-link {
         padding: 0.5rem 0.5rem;
@@ -193,10 +215,10 @@
 
 @media (max-width: 576px) {
     .logo-img {
-        height: 50px;
+        height: 48px;
     }
     .navbar-brand {
-        min-width: 120px;
+        min-width: 0;
     }
     .theme-main-menu .nav-link {
         padding: 0.4rem 0.4rem;
@@ -206,4 +228,16 @@
         padding: 6px 12px;
         font-size: 0.8rem;
     }
+}
+.nav-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1040;
+    opacity: 1;
+    transition: opacity 0.25s ease;
+}
+
+body.nav-open {
+    overflow: hidden;
 }
