@@ -8,10 +8,10 @@ import HowItWorks from '../HowItWorks';
 import FAQ from '../FAQ';
 
 const teamMembers = [
-  { name: 'John Doe', role: 'CEO & Founder', imgSrc: '/images/team/img_20.jpg' },
-  { name: 'Jane Smith', role: 'Chief Technology Officer', imgSrc: '/images/team/img_20.jpg' },
-  { name: 'Peter Jones', role: 'Lead Recruiter', imgSrc: '/images/team/img_20.jpg' },
-  { name: 'Sara Williams', role: 'Head of Marketing', imgSrc: '/images/team/img_20.jpg' },
+  { name: 'John Doe', role: 'CEO & Founder', imgSrc: 'https://www.loremfaces.net/256/id/2.jpg' },
+  { name: 'Jane Smith', role: 'Chief Technology Officer', imgSrc: 'https://www.loremfaces.net/256/id/3.jpg' },
+  { name: 'Peter Jones', role: 'Lead Recruiter', imgSrc: 'https://www.loremfaces.net/256/id/4.jpg' },
+  { name: 'Sara Williams', role: 'Head of Marketing', imgSrc: 'https://www.loremfaces.net/256/id/5.jpg' },
 ];
 
 const clientLogos = [

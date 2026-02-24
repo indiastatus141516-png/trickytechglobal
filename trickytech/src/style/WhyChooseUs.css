@@ -1,5 +1,5 @@
 .why-choose-us-section {
-    padding: 80px 0;
+    padding: 56px 0;
     background-color: #f8f9fa;
 }
 
@@ -70,7 +70,7 @@
 }
 
 .why-choose-us-section .accordion-button:not(.collapsed)::after {
-    content: '−';
+    content: '\2212';
     transform: rotate(0);
 }
 

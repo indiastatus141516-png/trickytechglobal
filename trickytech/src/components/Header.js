@@ -61,8 +61,15 @@ const Header = () => {
         >
             <Container>
                 <div className="logo-container">
-                    <Navbar.Brand as={Link} to="/">
-                        <img src="/images/transparent-logo.svg" alt="TrickyTech" className="logo-img" />
+                    <Navbar.Brand as={Link} to="/" className="brand-link">
+                        <img
+                            src="/images/transparent-logo.png"
+                            alt="TrickyTech"
+                            className="logo-img"
+                            onError={(e) => {
+                                e.currentTarget.src = '/images/transparent-logo.svg';
+                            }}
+                        />
                     </Navbar.Brand>
                 </div>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav">
@@ -90,7 +97,7 @@ const Header = () => {
 
                         <Nav.Link as={NavLink} to="/our-approach" onClick={closeNav}>Our Approach</Nav.Link>
                         <Nav.Link as={NavLink} to="/blog" onClick={closeNav}>Blog</Nav.Link>
-                        <Nav.Link as={NavLink} to="/contact" onClick={closeNav}>ContactUs</Nav.Link>
+                        <Nav.Link as={NavLink} to="/contact" onClick={closeNav}>Contact Us</Nav.Link>
                         
                         {authState.isAuthenticated ? (
                             <>

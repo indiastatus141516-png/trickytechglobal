@@ -246,14 +246,14 @@
 
 /* ---------- Feature Section ---------- */
 .job-opportunities-page .text-feature-one {
-  padding: 70px 0;
+  padding: 56px 0;
   background: #f8f9fa;
 }
 
 .job-opportunities-page .feature-grid {
   display: grid;
   grid-template-columns: 550px 1fr;
-  gap: 80px;
+  gap: 48px;
   align-items: center;
   background: #fff;
   border-radius: 24px;
@@ -355,7 +355,7 @@
 .job-opportunities-page .faq-section {
   background: #f8f9fa;
   border-radius: 24px;
-  padding: 80px 0;
+  padding: 56px 0;
   box-shadow: 0 4px 24px rgba(44, 62, 80, 0.06);
   margin-bottom: 48px;
 }
@@ -450,11 +450,11 @@
 }
 /* ---------- JobPortalIntro fallback styles (if imported) ---------- */
 .job-opportunities-page .job-portal-intro-section {
-  padding: 60px 0;
+  padding: 48px 0;
   background: linear-gradient(135deg, var(--green-1), var(--green-2));
   border-radius: 20px;
   color: #fff;
-  margin: 60px auto;
+  margin: 48px auto;
   max-width: var(--container-max);
   box-shadow: 0 20px 40px rgba(0, 128, 64, 0.15);
 }

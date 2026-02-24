@@ -5,7 +5,7 @@
   --light-gray: #f0f2f5;
   --white-color: #ffffff;
   --text-color: #4a4a4a;
-  --section-padding: 80px 0;
+  --section-padding: 56px 0;
   --container-width: 90%;
   --max-container-width: 1200px;
   --card-border-radius: 15px;
@@ -28,6 +28,28 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
 }
 
 code {
@@ -38,21 +60,52 @@ code {
 /* Responsive base styles */
 @media (max-width: 1200px) {
   :root {
-    --section-padding: 60px 0;
+    --section-padding: 48px 0;
     --max-container-width: 1000px;
   }
 }
 
 @media (max-width: 768px) {
   :root {
-    --section-padding: 40px 0;
+    --section-padding: 36px 0;
     --container-width: 95%;
     --max-container-width: 100%;
   }
+
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* Normalize oversized utility classes used by multiple sections on mobile */
+  .fs-50 { font-size: 2rem !important; }
+  .fs-45 { font-size: 1.75rem !important; }
+  .fs-35 { font-size: 1.35rem !important; }
+  .fs-24 { font-size: 1.05rem !important; }
+  .pt-150 { padding-top: 36px !important; }
+  .mt-100,
+  .xl-mt-150 { margin-top: 36px !important; }
 }
 
 @media (max-width: 576px) {
   :root {
-    --section-padding: 30px 0;
+    --section-padding: 28px 0;
   }
+
+  .container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  h1, .h1 { font-size: clamp(1.5rem, 6vw, 2rem); }
+  h2, .h2 { font-size: clamp(1.3rem, 5.4vw, 1.7rem); }
+  h3, .h3 { font-size: clamp(1.15rem, 4.8vw, 1.45rem); }
+
+  .fs-50 { font-size: 1.7rem !important; }
+  .fs-45 { font-size: 1.45rem !important; }
+  .fs-35 { font-size: 1.18rem !important; }
+  .fs-24 { font-size: 1rem !important; }
+  .pt-150 { padding-top: 28px !important; }
+  .mt-100,
+  .xl-mt-150 { margin-top: 28px !important; }
 }

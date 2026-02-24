@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import HeroSection from './HeroSection';
 import AboutUs from './AboutUs';
@@ -17,7 +17,7 @@ const Home = () => {
     const { user } = authState;
     const [showModal, setShowModal] = useState(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (user && (user.isFirstLogin || !user.isProfileCompleted)) {
             setShowModal(true);
         }
@@ -52,14 +52,14 @@ const Home = () => {
             {user && user.isProfileCompleted && user.isAgreementSigned && (
                 <div style={{
                     textAlign: 'center',
-                    padding: '20px',
+                    padding: '16px',
                     background: 'linear-gradient(135deg, #28a745, #20c997)',
                     color: 'white',
-                    fontSize: '24px',
+                    fontSize: '22px',
                     fontWeight: 'bold',
                     borderRadius: '8px',
-                    margin: '20px auto',
-                    maxWidth: '600px',
+                    margin: '16px auto',
+                    maxWidth: '560px',
                     boxShadow: '0 4px 8px rgba(0,0,0,0.2)'
                 }}>
                     ✅ Profile Completed

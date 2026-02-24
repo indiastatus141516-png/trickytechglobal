@@ -1,6 +1,7 @@
 /* General Header Styling */
 .theme-main-menu.sticky-menu {
     transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 0.35rem 0;
 }
 
 /* Style for when the header becomes sticky */
@@ -13,27 +14,41 @@
     display: flex;
     align-items: center;
     z-index: 10;
+    margin-right: 0.5rem;
 }
 
 .navbar-brand {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     min-width: 0;
-    padding: 0;
+    padding: 2px 0;
+}
+
+.brand-link {
+    max-width: 210px;
 }
 
 .logo-img {
-    height: 68px;
-    width: auto;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    max-height: 90px;
     object-fit: contain;
+    display: block;
+}
+
+.theme-main-menu.sticky-menu.is-sticky .logo-img {
+    max-width: 220px;
+    max-height: 76px;
 }
 
 /* Navigation Links */
 .theme-main-menu .nav-link {
     position: relative; /* Required for the ::after pseudo-element */
     transition: color 0.2s ease;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 0.97rem;
     color: #333;
     padding: 0.5rem 0.8rem; /* Adjusted for laptops */
     text-decoration: none;
@@ -138,10 +153,10 @@
 @media (max-width: 991px) {
     .custom-navbar-collapse {
         position: fixed;
-        top: 72px;
+        top: 82px;
         right: 0;
         height: auto;
-        max-height: calc(100vh - 88px);
+        max-height: calc(100vh - 96px);
         width: min(82vw, 340px);
         margin-top: 0;
         background-color: #f8f9fa;
@@ -193,8 +208,13 @@
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .brand-link {
+        max-width: 170px;
+    }
+
     .logo-img {
-        height: 56px;
+        max-width: 200px;
+        max-height: 66px;
     }
     .navbar-brand {
         min-width: 0;
@@ -210,12 +230,19 @@
     .custom-navbar-collapse {
         margin-top: 0.5rem;
         padding: 0.5rem;
+        top: 74px;
+        max-height: calc(100vh - 84px);
     }
 }
 
 @media (max-width: 576px) {
+    .brand-link {
+        max-width: 150px;
+    }
+
     .logo-img {
-        height: 48px;
+        max-width: 175px;
+        max-height: 58px;
     }
     .navbar-brand {
         min-width: 0;

@@ -78,7 +78,7 @@
 }
 
 .btn-seven::after {
-    content: ' →';
+    content: ' \2192';
     transition: transform 0.3s ease;
     display: inline-block;
 }
